@@ -1,0 +1,15 @@
+{
+  "name": "appscriptvscode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "code.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "import data from spreadsheet to web app"
+  },
+  "author": "Getnet Demil",
+  "license": "ISC"
+}

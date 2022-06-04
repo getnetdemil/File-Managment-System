@@ -1,0 +1,34 @@
+<script>
+	/*
+  *THIS FUNCTION CALL THE getData() FUNCTION IN THE Code.gs FILE, 
+  *AND PASS RETURNED DATA TO showData() FUNCTION
+  */
+  google.script.run.withSuccessHandler(showData).getData();
+
+  //THIS FUNCTION GENERATE THE DATA TABLE FROM THE DATA ARRAY
+  function showData(dataArray){
+    $(document).ready(function(){
+      $('#data-table').DataTable({
+        data: dataArray,
+        //CHANGE THE TABLE HEADINGS BELOW TO MATCH WITH YOUR SELECTED DATA RANGE
+        columns: [
+          {"title":"ተ.ቁ"},
+          {"title":"ቅሬታው የቀረበበት  ቀን (ወር/ቀን/ዓ.ም)"},
+          {"title":"ቅሪታውን መጀመሪያ የተቀበለው የስራ ክፍል"},
+          {"title":"ቅሬታውን ያቀርበው ደንበኛ አገልግሎት የሚያገኝበት ማዕከል"},
+          {"title":"የቅሬታ አቅራቢው  ደንበኛ ስም"},
+          {"title":"የደንበኛው ቢፒ/ሰርቪስ ቈጥር/ሜትር ቁጥር "},
+          {"title":"የደንበኛው ስልክ ቁጥር"},
+          {"title":"የቅሬታው አይነት"},
+          {"title":"ቅሬታውን እንዲፈታ የተመራለት/የተነገረው  የስራ ክፍል/ማዕከል"},
+          {"title":"ቅሬታውን እንዲፈታ  የተመራለት ሰራተኛ"},
+          {"title":"ስራው ያለበት ደርጃ"},
+          {"title":"ቅሬታው የተመዘገበበት ቀን እ.ኤ.አ (ወር/ቀን/ዓ.ም) Automatically Generated Date GC"},
+          {"title":"ቅሬታው የተፈታበት ቀን እ.ኤ.አ  (ወር/ቀን/ዓ.ም) Automatically Generated Date  GC"},
+          {"title":"ቅሬታውን ለመፍታት የፈጀው ጊዜ በቀን"},
+          {"title":"ምርመራ"}
+        ]
+      });
+    });
+  }
+</script>
